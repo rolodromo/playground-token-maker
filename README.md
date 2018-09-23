@@ -1,4 +1,10 @@
-# demo
+# Token Maker
+
+A simple Vue app to create circle images with borders and save them to disk.
+
+
+![demo](demo.gif)
+
 
 ## Project setup
 ```

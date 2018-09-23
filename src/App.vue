@@ -1,28 +1,64 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <span><i class="gi gi-emerald logo"></i> Vue Token Maker</span>
+    </header>
+    <main>
+      <cropper></cropper>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Cropper from './components/Cropper.vue'
 
 export default {
-  name: "app",
+  name: 'App',
   components: {
-    HelloWorld
+    Cropper
   }
-};
+}
 </script>
 
 <style>
+body {
+  margin: 0;
+}
+
+.logo {
+  font-size: 1.4em;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+main {
+  text-align: center;
+  margin-top: 40px;
+}
+
+header {
+  margin: 0;
+  height: 56px;
+  padding: 0 16px 0 24px;
+  background-color: #35495e;
+  color: #ffffff;
+}
+
+header span {
+  display: block;
+  position: relative;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-top: 16px;
 }
 </style>

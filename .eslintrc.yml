@@ -1,0 +1,22 @@
+root: true
+env:
+  node: true
+extends:
+  - 'plugin:vue/strongly-recommended'
+  - '@vue/prettier'
+parserOptions:
+  parser: babel-eslint
+rules:
+  vue/attribute-hyphenation:
+    - error
+    - always
+  vue/html-indent:
+    - error
+    - 2
+  vue/html-quotes:
+    - error
+    - double
+  no-console: 0
+  vue/max-attributes-per-line: 'off'
+  vue/html-self-closing: 'off'
+  vue/require-default-prop: warning
