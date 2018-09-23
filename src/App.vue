@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <header>
-      <span><i class="gi gi-emerald logo"></i> Vue Token Maker</span>
+      <span style="flex: 10; "><i class="gi gi-emerald logo"></i> Vue Token Maker</span>
+      <span><a href="https://github.com/rolodromo/playground-token-maker"><i class="fab fa-github github"></i></a></span>
     </header>
     <main>
       <cropper></cropper>
@@ -49,6 +50,7 @@ header {
   padding: 0 16px 0 24px;
   background-color: #35495e;
   color: #ffffff;
+  display: flex;
 }
 
 header span {
@@ -60,5 +62,12 @@ header span {
   font-weight: 400;
   box-sizing: border-box;
   padding-top: 16px;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.github {
+  font-size: 1.42em;
 }
 </style>
