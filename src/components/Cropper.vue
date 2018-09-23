@@ -63,39 +63,43 @@
   </div>
 </template>
 <script>
-import VBtn from './Button'
-import VBtnGroup from './ButtonGroup'
 import Swatches from 'vue-swatches'
 import 'vue-swatches/dist/vue-swatches.min.css'
 
+import VBtn from './Button'
+import VBtnGroup from './ButtonGroup'
+
+// UGLY HACK, but it's late
+const PREFIX = process.env.NODE_ENV === 'production' ? '/playground-token-maker' : ''
+
 const FRAMES = {
   circle1: {
-    src: '/img/circle_frame_1.png',
+    src: `${PREFIX}/img/circle_frame_1.png`,
     size: { width: 512, height: 512 },
     rect: [35, 30, 440, 440],
     brightness: { r: 0.2, g: 0.2, b: 0.2 }
   },
   circle3: {
-    src: '/img/circle_frame_3.png',
+    src: `${PREFIX}/img/circle_frame_3.png`,
     size: { width: 512, height: 512 },
     rect: [35, 35, 440, 440],
     brightness: { r: 0.2, g: 0.2, b: 0.2 }
   },
   circle4: {
-    src: '/img/circle_frame_4.png',
+    src: `${PREFIX}/img/circle_frame_4.png`,
     size: { width: 500, height: 500 },
     rect: [25, 25, 450, 450],
     brightness: { r: 0.3, g: 0.3, b: 0.1 }
   },
 
   circle5: {
-    src: '/img/circle_frame_5.png',
+    src: `${PREFIX}/img/circle_frame_5.png`,
     size: { width: 512, height: 512 },
     rect: [75, 75, 365, 365],
     brightness: { r: 0.3, g: 0.5, b: 0.5 }
   },
   circle6: {
-    src: '/img/circle_frame_6.png',
+    src: `${PREFIX}/img/circle_frame_6.png`,
     size: { width: 512, height: 512 },
     rect: [35, 35, 440, 440],
     brightness: { r: 0.3, g: 0.5, b: 0.5 }
@@ -125,15 +129,8 @@ export default {
         height: ''
       },
       cropped: null,
-      uploadedUrl: 'http://hbimg.b0.upaiyun.com/bda0df2067833be91bc4809bfbbfe5ae9b353a64121e2-crHsAo',
-      color: '#615192',
-      colors: [
-        ['#0D2700', '#1B4C00', '#349500', '#3CAD00'],
-        ['#2C2900', '#575100', '#ABA000', '#C7BA00'],
-        ['#3a1111', '#560c0c', '#AD0000', '#D10000'],
-        ['#13073a', '#261758', '#615192', '#887caf'],
-        ['#2C1900', '#573200', '#AB6200', '#C77200']
-      ],
+      uploadedUrl: `${PREFIX}/img/face.png`,
+      color: '#b45f06',
       defaultBrightness: { r: 0.1, g: 0.1, b: 0.1 }
     }
   },

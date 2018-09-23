@@ -2,9 +2,9 @@
 
 A simple Vue app to create circle images with borders and save them to disk.
 
-
 ![demo](demo.gif)
 
+[Live demo](https://rolodromo.github.io/playground-token-maker)
 
 ## Project setup
 ```
